@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personoplysninger</title>
+  <link rel="stylesheet" href="/person.css" />
+</head>
+<body>
+  <div class="staff-container">
+    <h1>Personoplysninger</h1>
+    
+    <form id="personForm"> 
+      <input type="text" id="name" placeholder="Navn" required /><br />
+      <input type="text" id="role" placeholder="Rolle" required /><br />
+      <input type="text" id="language" placeholder="Sprog" required /><br />
+      <!-- Billeder kommer senere -->
+
+      <button type="submit" class="btn">Bekræft</button>
+    </form>
+  </div>
+
+  <script>
+    // Hvis vi har eksisterende data (redigering)
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const role = params.get("role");
+    const language = params.get("language");
+
+    if (name) document.getElementById("name").value = name;
+    if (role) document.getElementById("role").value = role;
+    if (language) document.getElementById("language").value = language;
+
+    document.getElementById("personForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = {
+        name: document.getElementById("name").value,
+        role: document.getElementById("role").value,
+        language: document.getElementById("language").value
+      };
+      // gem i localStorage og send tilbage til staff-siden
+      localStorage.setItem("newPerson", JSON.stringify(data));
+      window.location.href = "/staff";
+    });
+  </script>
+</body>
+</html>

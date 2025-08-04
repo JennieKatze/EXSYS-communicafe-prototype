@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings - CommuniCafe</title>
+    <link rel="stylesheet" href="/settings.css">
+</head>
+<body>
+    <div class="settings-container">
+        <button class="close-button" onclick="window.location.href='/'">✖</button>
+
+        <h1>⚙️ Settings</h1>
+
+        <div class="setting-row">
+            <label for="textSize">Text Size:</label>
+            <select id="textSize">
+                <option>Small</option>
+                <option selected>Medium</option>
+                <option>Large</option>
+            </select>
+        </div>
+
+        <div class="setting-row">
+            <label for="theme">Theme:</label>
+            <select id="theme">
+                <option selected>Green</option>
+                <option>...</option>
+            </select>
+        </div>
+
+        <div class="setting-row">
+            <label for="fontStyle">Font Style:</label>
+            <select id="fontStyle">
+                <option selected>...</option>
+                <option>...</option>
+            </select>
+        </div>
+
+        <div class="setting-row">
+            <label for="voiceType">Voice Type:</label>
+            <select id="voiceType">
+                <option>Female</option>
+                <option>Male</option>
+                <option>Robot</option>
+                <option>...</option>
+            </select>
+        </div>
+
+        <div class="setting-row">
+            <label for="speed">Speed:</label>
+            <select id="speed">
+                <option>Slow</option>
+                <option selected>Normal</option>
+                <option>Fast</option>
+            </select>
+        </div>
+
+        <div class="setting-row">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="75">
+        </div>
+
+        <div class="setting-row">
+            <label for="sourceLang">Default Source Language:</label>
+            <select id="sourceLang">
+                <option selected>Danish</option>
+                <option>English</option>
+                <option>German</option>
+                <option>French</option>
+                <option>Spanish</option>
+                <option>Arabic</option>
+                <option>Tyrkish</option>
+                <option>Farsi (Persian)</option>
+            </select>
+        </div>
+
+        <div class="setting-row">
+            <label for="targetLang">Default Target Language:</label>
+            <select id="targetLang">
+                <option>Danish</option>
+                <option selected>English</option>
+                <option>German</option>
+                <option>French</option>
+                <option>Spanish</option>
+                <option>Arabic</option>
+                <option>Tyrkish</option>
+                <option>Farsi (Persian)</option>
+            </select>
+        </div>
+
+        <div class="button-row">
+            <button id="reset">Reset to Default</button>
+            <button id="save">Save Changes</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
